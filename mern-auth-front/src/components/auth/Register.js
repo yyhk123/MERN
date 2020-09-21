@@ -87,14 +87,14 @@ export default function Register() {
 
         <div className="form-group row">
           <label
-            htmlFor="register-password"
+            htmlFor="register-verify-password"
             className="col-sm-2 col-form-label"
           >
             Verify Password
           </label>
           <div className="col-sm-10">
             <input
-              id="register-password"
+              id="register-verify-password"
               type="password"
               className="form-control"
               onChange={(e) => setPasswordCheck(e.target.value)}
