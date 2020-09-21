@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  height: 100%;
+}
+
+a {
+  color: #2199df;
+  text-decoration: unset;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style: none;
+}
+
+.reg-btn {
+  border: none;
+  background: none;
+  color: unset;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 1em 0;
+}
+
+.authoption {
+  margin-left: auto !important;
+}
+.login-button {
+  margin-left: 10px;
+}
+.page {
+  padding: 1rem;
+}
+
+input {
+  padding: 0.2rem;
+}
+
+.error-notice {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #e07c7c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8d6d6;
+}
+
+.form {
+  padding: 1rem 0;
+}
+.update-section {
+  display: flex;
+}
+.update-input {
+  margin-right: 1rem;
+}
+
+/* Lists */
+.org {
+  text-align: center;
+}
+.table-wrapper {
+  margin: auto;
+  overflow: hidden;
+  width: 50%;
+}
+.t1 {
+  float: left;
+}
+.t2 {
+  float: right;
+}
+
+@media screen and (max-width: 850px) {
+  .org {
+    font-size: 1.5rem;
+  }
+  .table-wrapper {
+    margin: auto;
+    overflow: hidden;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .org {
+    font-size: 1.3rem;
+  }
+  .table-wrapper {
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+    font-size: 0.8rem;
+  }
+}
