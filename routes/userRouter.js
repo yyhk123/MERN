@@ -184,23 +184,23 @@ router.post("/passwordUpdate/:id", async (req, res) => {
   }
 });
 
-// router.post("/tokenIsValid", async (req, res) => {
-//   // show different screen if not logged in
-//   try {
-//     const token = req.header("x-auth-token");
-//     if (!token) return res.json(false);
+router.post("/tokenIsValid", async (req, res) => {
+  // show different screen if not logged in
+  try {
+    const token = req.header("x-auth-token");
+    if (!token) return res.json(false);
 
-//     const verified = jwt.verify(token, process.env.JWT_SECRET);
-//     if (!verified) return res.json(false);
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    if (!verified) return res.json(false);
 
-//     const user = await User.findById(verified.id);
-//     if (!user) return res.json(false);
+    const user = await User.findById(verified.id);
+    if (!user) return res.json(false);
 
-//     return res.json(true);
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
+    return res.json(true);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 router.get("/", auth, async (req, res) => {
   const user = await User.findById(req.user);
