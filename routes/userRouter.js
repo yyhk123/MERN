@@ -195,12 +195,10 @@ router.post("/tokenIsValid", async (req, res) => {
 
     const user = await User.findById(verified.id);
     if (!user) return res.json(false);
-    console.log("json web error1");
 
     return res.json(true);
   } catch (err) {
     res.status(500).json({ error: err.message });
-    console.log("json web error2");
   }
 });
 

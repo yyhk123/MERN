@@ -14,7 +14,7 @@ app.listen(port, () => console.log("The sever has started on port: ${port}"));
 
 // set up mongoose
 //const uri = process.env.MONGODB_CONNECTION_STRING;
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb://localhost/Database", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
