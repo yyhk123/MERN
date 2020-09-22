@@ -32,6 +32,7 @@ export default function Home() {
       window.location.reload();
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
+      this.errorStatus = "Error: Network Error";
     }
   };
 
