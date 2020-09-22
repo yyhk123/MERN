@@ -26,7 +26,6 @@ export default function Home() {
       await axios.post(
         "http://localhost:5000/users/usernameUpdate/" + userData.user.id,
         {
-          method: "post",
           displayName: newDisplayName,
         }
       );

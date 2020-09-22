@@ -14,21 +14,18 @@ app.listen(port, () => console.log("The sever has started on port: ${port}"));
 
 // set up mongoose
 //const uri = process.env.MONGODB_CONNECTION_STRING;
-mongoose.connect(
-  "mongodb://heroku_xbwvxbp9:ch8tc9p02i3en8l2qn3ue4o0rm@ds015902.mlab.com:15902/heroku_xbwvxbp9",
-  {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("mern-auth-front/build"));
 
   app.get("*", (req, res) => {
     res.sendFile(
-      path.join(__dirname, "mern-auth-front", "build", "index.html")
+      path.resolve(__dirname, "mern-auth-front", "build", "index.html")
     );
   });
 }
