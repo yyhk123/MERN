@@ -26,13 +26,19 @@ export default function Register() {
         displayName,
         organization,
       };
-      await axios.post("myapp.herokuapp.com/users/register", newUser);
+      await axios.post(
+        "${window.location.hostname}:5000/users/register",
+        newUser
+      );
 
-      const loginRes = await axios.post("myapp.herokuapp.com/users/login", {
-        //after register, automatically login with email and password just created
-        email,
-        password,
-      });
+      const loginRes = await axios.post(
+        "${window.location.hostname}:5000/users/login",
+        {
+          //after register, automatically login with email and password just created
+          email,
+          password,
+        }
+      );
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,

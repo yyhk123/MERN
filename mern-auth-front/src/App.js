@@ -26,15 +26,18 @@ export default function App() {
 
       const tokenRes = await Axios.post(
         // if there is token, check if it is valid data.
-        "myapp.herokuapp.com/users/tokenIsValid",
+        "${window.location.hostname}:5000/users/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenRes.data) {
         // if checked token above(tokenRes) is true, then get user's data that belongs to the token
-        const userRes = await Axios.get("myapp.herokuapp.com/users/", {
-          headers: { "x-auth-token": token },
-        });
+        const userRes = await Axios.get(
+          "${window.location.hostname}:5000/users/",
+          {
+            headers: { "x-auth-token": token },
+          }
+        );
         setUserData({
           token,
           user: userRes.data,

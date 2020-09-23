@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const loginUser = { email, password };
       const loginRes = await axios.post(
-        "myapp.herokuapp.com/users/login",
+        "${window.location.hostname}:5000/users/login",
         //after register, automatically login with email and password just created
         loginUser
       );

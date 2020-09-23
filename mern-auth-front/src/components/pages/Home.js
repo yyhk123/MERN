@@ -45,7 +45,8 @@ export default function Home() {
       console.log(newPassword);
 
       await axios.post(
-        "myapp.herokuapp.com/users/passwordUpdate/" + userData.user.id,
+        "${window.location.hostname}:5000/users/passwordUpdate/" +
+          userData.user.id,
         {
           password: newPassword,
         }

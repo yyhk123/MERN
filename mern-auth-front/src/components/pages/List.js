@@ -22,7 +22,7 @@ class Lists extends Component {
 
   componentDidMount() {
     axios
-      .get("myapp.herokuapp.com/users/lists")
+      .get("${window.location.hostname}:5000/users/lists")
       .then((res) => {
         this.setState({ users: res.data });
       })
