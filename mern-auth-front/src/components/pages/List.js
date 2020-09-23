@@ -22,7 +22,7 @@ class Lists extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/users/lists")
+      .get("/users/lists")
       .then((res) => {
         this.setState({ users: res.data });
       })
