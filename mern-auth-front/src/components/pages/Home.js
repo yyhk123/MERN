@@ -45,8 +45,7 @@ export default function Home() {
       console.log(newPassword);
 
       await axios.post(
-        "https://mern-auth-login-one.herokuapp.com/users/passwordUpdate/" +
-          userData.user.id,
+        "myapp.herokuapp.com/users/passwordUpdate/" + userData.user.id,
         {
           password: newPassword,
         }
