@@ -44,9 +44,13 @@ export default function Home() {
       console.log(userData.user.id);
       console.log(newPassword);
 
-      await axios.post("/users/passwordUpdate/" + userData.user.id, {
-        password: newPassword,
-      });
+      await axios.post(
+        "https://mern-auth-login-one.herokuapp.com/users/passwordUpdate/" +
+          userData.user.id,
+        {
+          password: newPassword,
+        }
+      );
       window.location.reload();
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
