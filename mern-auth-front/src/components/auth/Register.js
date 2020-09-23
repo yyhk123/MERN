@@ -27,12 +27,12 @@ export default function Register() {
         organization,
       };
       await axios.post(
-        "${window.location.hostname}:5000/users/register",
+        "${window.location.mern-auth-login-one}:5000/users/register",
         newUser
       );
 
       const loginRes = await axios.post(
-        "${window.location.hostname}:5000/users/login",
+        "${window.location.mern-auth-login-one}:5000/users/login",
         {
           //after register, automatically login with email and password just created
           email,
