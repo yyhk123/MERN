@@ -26,7 +26,7 @@ export default function App() {
 
       const tokenRes = await Axios.post(
         // if there is token, check if it is valid data.
-        "/users/tokenIsValid",
+        "/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );

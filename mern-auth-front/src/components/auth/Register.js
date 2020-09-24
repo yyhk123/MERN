@@ -26,9 +26,9 @@ export default function Register() {
         displayName,
         organization,
       };
-      await axios.post("/users/register", newUser);
+      await axios.post("/register", newUser);
 
-      const loginRes = await axios.post("/users/login", {
+      const loginRes = await axios.post("/login", {
         //after register, automatically login with email and password just created
         email,
         password,

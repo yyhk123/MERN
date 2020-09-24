@@ -23,7 +23,7 @@ export default function Home() {
       console.log(userData.user.id);
       console.log(newDisplayName);
 
-      await axios.post("/users/usernameUpdate/" + userData.user.id, {
+      await axios.post("/usernameUpdate/" + userData.user.id, {
         displayName: newDisplayName,
       });
       window.location.reload();
@@ -41,7 +41,7 @@ export default function Home() {
       console.log(userData.user.id);
       console.log(newPassword);
 
-      await axios.post("/users/passwordUpdate/" + userData.user.id, {
+      await axios.post("/passwordUpdate/" + userData.user.id, {
         password: newPassword,
       });
       window.location.reload();
