@@ -21,10 +21,16 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("mern-auth-front/build"));
+  //app.use(express.static("mern-auth-front/build"));
+  app.use(express.static(path.join(__dirname, "mern-auth-front/build")));
 
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "mern-auth-front/build"));
+  // });
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "mern-auth-front/build"));
+    res.sendFile(
+      path.resolve(__dirname, "mern-auth-front", "build", "index.html")
+    );
   });
 }
 
