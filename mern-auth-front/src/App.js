@@ -32,12 +32,9 @@ export default function App() {
       );
       if (tokenRes.data) {
         // if checked token above(tokenRes) is true, then get user's data that belongs to the token
-        const userRes = await Axios.get(
-          "https://mern-auth-login-one.herokuapp.com/users/",
-          {
-            headers: { "x-auth-token": token },
-          }
-        );
+        const userRes = await Axios.get("/users/", {
+          headers: { "x-auth-token": token },
+        });
         setUserData({
           token,
           user: userRes.data,

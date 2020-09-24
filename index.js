@@ -27,9 +27,7 @@ if (process.env.NODE_ENV === "production") {
   //   res.sendFile(path.join(__dirname, "mern-auth-front/build"));
   // });
   app.get("*", (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, "mern-auth-front", "build", "index.html")
-    );
+    res.sendFile(path.join(__dirname + "mern-auth-front/build/index.html"));
   });
 }
 
