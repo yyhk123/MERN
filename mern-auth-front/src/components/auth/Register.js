@@ -26,19 +26,13 @@ export default function Register() {
         displayName,
         organization,
       };
-      await axios.post(
-        "http://window.location.mern-auth-login-one:5000/users/register",
-        newUser
-      );
+      await axios.post("http://localhost:5000/users/register", newUser);
 
-      const loginRes = await axios.post(
-        "http://window.location.mern-auth-login-one:5000/users/login",
-        {
-          //after register, automatically login with email and password just created
-          email,
-          password,
-        }
-      );
+      const loginRes = await axios.post("http://localhost:5000/users/login", {
+        //after register, automatically login with email and password just created
+        email,
+        password,
+      });
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,

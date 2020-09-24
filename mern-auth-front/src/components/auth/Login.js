@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const loginUser = { email, password };
       const loginRes = await axios.post(
-        "http://window.location.mern-auth-login-one:5000/users/login",
+        "http://localhost:5000/users/login",
         //after register, automatically login with email and password just created
         loginUser
       );

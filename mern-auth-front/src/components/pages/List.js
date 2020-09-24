@@ -22,7 +22,7 @@ class Lists extends Component {
 
   componentDidMount() {
     axios
-      .get("http://window.location.mern-auth-login-one:5000/users/lists")
+      .get("http://localhost:5000/users/lists")
       .then((res) => {
         this.setState({ users: res.data });
       })
