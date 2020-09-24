@@ -26,14 +26,14 @@ export default function App() {
 
       const tokenRes = await Axios.post(
         // if there is token, check if it is valid data.
-        "window.location.mern-auth-login-one:5000/users/tokenIsValid",
+        "http://window.location.mern-auth-login-one:5000/users/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenRes.data) {
         // if checked token above(tokenRes) is true, then get user's data that belongs to the token
         const userRes = await Axios.get(
-          "window.location.mern-auth-login-one:5000/users/",
+          "http://window.location.mern-auth-login-one:5000/users/",
           {
             headers: { "x-auth-token": token },
           }

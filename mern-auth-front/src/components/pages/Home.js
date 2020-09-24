@@ -45,7 +45,7 @@ export default function Home() {
       console.log(newPassword);
 
       await axios.post(
-        "window.location.mern-auth-login-one:5000/users/passwordUpdate/" +
+        "http://window.location.mern-auth-login-one:5000/users/passwordUpdate/" +
           userData.user.id,
         {
           password: newPassword,
