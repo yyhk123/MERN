@@ -22,7 +22,7 @@ class Lists extends Component {
 
   componentDidMount() {
     axios
-      .get("/users/lists")
+      .get("https://mern-auth-login-one.herokuapp.com/users/lists")
       .then((res) => {
         this.setState({ users: res.data });
       })

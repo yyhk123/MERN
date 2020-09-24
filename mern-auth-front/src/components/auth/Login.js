@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const loginUser = { email, password };
       const loginRes = await axios.post(
-        "/users/login",
+        "https://mern-auth-login-one.herokuapp.com/users/login",
         //after register, automatically login with email and password just created
         loginUser
       );
