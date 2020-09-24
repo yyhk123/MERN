@@ -32,7 +32,7 @@ export default function App() {
       );
       if (tokenRes.data) {
         // if checked token above(tokenRes) is true, then get user's data that belongs to the token
-        const userRes = await Axios.get("http://localhost:5000/users/", {
+        const userRes = await Axios.get("/users/", {
           headers: { "x-auth-token": token },
         });
         setUserData({
