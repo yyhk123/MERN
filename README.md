@@ -23,7 +23,7 @@ Login page using MongoDB, Express.js, React, Node.js
 
 
 5. Changing username
-![App Screenshot](/changingname.png)
+![App Screenshot](/images/changingname.png)
 
 
 6. Username changed
