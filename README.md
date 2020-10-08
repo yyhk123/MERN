@@ -15,20 +15,20 @@ Login page using MongoDB, Express.js, React, Node.js
   - If password is less than 5 characters and password and Verify password do not match
   - If username is less than 3 characters
   - If organization name is less than 3 characters and longer than 10 characters
-![App Screenshot](images/register error.png)
+![App Screenshot](images/main.png)
 
 
 4. Page after login
-![App Screenshot](images/login.png)
+![App Screenshot](images/main.png)
 
 
 5. Changing username
-![App Screenshot](images/changing name.png)
+![App Screenshot](images/main.png)
 
 
 6. Username changed
-![App Screenshot](images/username changed.png)
+![App Screenshot](images/main.png)
 
 
 7. Login error
-![App Screenshot](images/Login Error.png)
+![App Screenshot](images/main.png)
