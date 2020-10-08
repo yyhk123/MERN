@@ -3,7 +3,7 @@
 Login page using MongoDB, Express.js, React, Node.js 
 
 1. Main page
-![App Screenshot](images/main.PNG)
+![App Screenshot](images/main.png)
 
 2. Register Page (Top Right)
 ![App Screenshot](images/register.PNG)
