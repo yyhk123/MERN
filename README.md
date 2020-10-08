@@ -15,20 +15,20 @@ Login page using MongoDB, Express.js, React, Node.js
   - If password is less than 5 characters and password and Verify password do not match
   - If username is less than 3 characters
   - If organization name is less than 3 characters and longer than 10 characters
-![App Screenshot](images/register error.png)
+![App Screenshot](https://github.com/yyhk123/MERN/tree/master/images/register error.png)
 
 
 4. Page after login
-![App Screenshot](images/login.png)
+![App Screenshot](https://github.com/yyhk123/MERN/tree/master/images/login.png)
 
 
 5. Changing username
-![App Screenshot](images/changing name.png)
+![App Screenshot](https://github.com/yyhk123/MERN/tree/master/images/changing name.png)
 
 
 6. Username changed
-![App Screenshot](images/username changed.png)
+![App Screenshot](https://github.com/yyhk123/MERN/tree/master/images/username changed.png)
 
 
 7. Login error
-![App Screenshot](images/Login Error.png)
+![App Screenshot](https://github.com/yyhk123/MERN/tree/master/images/Login Error.png)
